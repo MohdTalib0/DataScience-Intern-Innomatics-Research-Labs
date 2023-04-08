@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{% block titleblock %}    
+    Home
+{% endblock %}
+
+{% block bodyblock %}    
+<script>
+    function myFunc() {
+        var v = document.getElementById("myInput");
+        v.select();
+        navigator.clipboard.writeText(v.value);
+      }
+    </script>
+<h1 align="center"><u>URL Shortener</u></h1>
+<hr color="Black">
+<table border="5" width="1000px" align="center" bgcolor="#53c9e3" class="center">
+<form action="{{ url_for('home_page')}}" method="post">
+    <tr>
+        <td><h3 style="font-size: 1.5em;">ORIGINAL URL</h3></td>
+    </tr>
+    <tr>
+        <td><input type="text" name="url" style="font-size: 13pt; height: 30px ; width: 1000px;" placeholder="insert full url here" title="Long URL"></td>
+    </tr>
+    <tr>
+        <td><input type="submit" value="SHORTEN" style="height: 50px; width:100px; margin:auto; display:block;background-color: rgb(102, 232, 252);font-weight:bold;border-radius: 12px;" title="Press the button to shorten your URL"></td>
+    </tr>
+    <tr>
+        <td><h3 style="font-size: 1.5em;">SHORT URL</h3></td>
+    </tr>
+    <tr>
+        <td>
+        {% if error==1 %}
+        <div class="alert alert-danger" role="alert" style="position:fixed; left: 0px; width: 100%;">
+        Please enter a valid URL!
+        </div>
+        {% elif error==0 %}
+        <a href=http://127.0.0.1:5000/{{finalurl}}><input style="font-size: 13pt; height: 30px ; width: 950px;" type="text" value="http://127.0.0.1:5000/{{finalurl}}" title="Short URL" id="myInput" readonly></a>
+        <button type="button" onclick="myFunc()" class="btn-clipboard" title="Copy to clipboard" style="border-radius: 8px;"><svg class="bi" width="0.009em" height="0.4em" fill="currentColor"><use xlink:href="/bootstrap-icons.svg#clipboard"></use></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+        </svg></button>
+        {% endif %}
+        </td>
+    </tr>
+</form>
+</table>
+{% endblock %}

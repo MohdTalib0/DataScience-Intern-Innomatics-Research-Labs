@@ -1,0 +1,103 @@
+/* Style for the body of the pages */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  /* Style for the header of the pages */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Style for the h1 element */
+  h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  
+  /* Style for the form element */
+  form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-top: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  form:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style for the label element */
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  /* Style for the input element */
+  input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  input[type=text]:focus {
+    border-color: #333;
+  }
+  
+  /* Style for the submit button */
+  input[type=submit] {
+    background-color: #333;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #555;
+  }
+  
+  /* Style for the unordered list */
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Style for the list item */
+  li {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  li:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  body 
+  {
+background: #62a2da;
+  }

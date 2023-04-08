@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <title>Regex Tester Results</title>
+    </head>
+    <body>
+        <h1>Matches found:</h1>
+        <!-- Display the list of matches as a bullet list -->
+        <ul>
+            {% for match in matches %}
+                <li>{{ match }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

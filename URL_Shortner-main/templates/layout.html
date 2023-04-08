@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        {% block titleblock %}    
+    
+        {% endblock %}
+    </title>
+    <style>
+      body{
+          background-image:url("https://wallpaperaccess.com/full/3078904.jpg  ");
+      }
+  </style>
+</head>
+<body>
+    <nav>
+        <ul>
+        <li><a href="{{ url_for('home_page') }}">Home</a></li>
+        <li><a href="{{ url_for('history_page') }}">History</a></li>
+    </ul>
+    </nav>
+    <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: rgb(33, 2, 2);
+        }
+        
+        li {
+          float: left;
+        }
+        
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        li a:hover {
+          background-color: rgb(90, 26, 26);
+        }
+        #far 
+        {
+          background: #45bada;
+        }
+        </style>
+    
+    {% block bodyblock %}    
+    
+    {% endblock %}
+</body>
+</html>
